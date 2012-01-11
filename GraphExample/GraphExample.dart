@@ -2,11 +2,6 @@
 #source('Stack.dart');
 
 void main() {
-  print("Hello World");
-  
-  Graph g = new Graph.WithEdges(1, 1);
-  print(g.toString());
-  //print("Goodbye World!");
   Graph gg = new Graph(13);
   
   gg.addEdge(0,5);
