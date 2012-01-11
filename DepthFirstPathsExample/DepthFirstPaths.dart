@@ -26,11 +26,17 @@ class DepthFirstPaths {
   }
   
   // return a path between s to v; null if no such path
-  List<int> pathTo(int v) {
+  Iterable<int> pathTo(int v) {
     if (!hasPathTo(v)) {
       return null;
     }
     
+    Stack<int> path = new Stack<int>();
+    for (int x = v; x!=s; x = edgeTo[x]) {
+      path.push(x);
+    }
     
+    path.push(s);
+    return path;
   }
 }
